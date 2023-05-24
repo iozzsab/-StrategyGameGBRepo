@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Abstractions;
 using UnityEngine;
+using UnityEngine.UI;
+using UserControlSystem;
 
-public class MouseUnteractionPresenter : MonoBehaviour
+public class MouseInteractionPresenter : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
+    [SerializeField] private SelectableValue _selectedObject;
     
       void Update()
     {
@@ -21,14 +25,11 @@ public class MouseUnteractionPresenter : MonoBehaviour
             return;
         }
 
-        var mainBuilding = hits
-            .Select(hit => hit.collider.GetComponentInParent<MainBuilding>())
+        var selectable = hits
+            .Select(hit => hit.collider.GetComponentInParent<ISelectable>())
             .FirstOrDefault(c => c != null);
-        if (mainBuilding == default)
-        {
-            return;
-        }
-        mainBuilding.ProduceUnit();
+        _selectedObject.SetValue(selectable);
+        
         
     }
 }

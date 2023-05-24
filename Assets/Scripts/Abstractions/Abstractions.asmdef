@@ -1,9 +1,7 @@
 {
-    "name": "NewAssembly",
+    "name": "Abstractions",
     "rootNamespace": "",
-    "references": [
-        "GUID:f40f635915154ca42a5a64d98311a4bd"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
