@@ -13,6 +13,7 @@ namespace UserControlSystem
         [SerializeField] private Image _sliderBackground;
         [SerializeField] private Image _sliderFillImage;
         [SerializeField] private SelectableValue _selectedValue;
+     
 
         void Start()
         {
@@ -37,7 +38,7 @@ namespace UserControlSystem
                 var color = Color.Lerp(Color.red, Color.green, selected.Health / selected.MaxHealth);
                 _sliderBackground.color = color * 0.5f;
                 _sliderFillImage.color = color;
-
+                
             }
         }
     }

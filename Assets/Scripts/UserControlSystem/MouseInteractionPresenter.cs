@@ -30,6 +30,6 @@ public class MouseInteractionPresenter : MonoBehaviour
             .FirstOrDefault(c => c != null);
         _selectedObject.SetValue(selectable);
         
-        
+
     }
 }
