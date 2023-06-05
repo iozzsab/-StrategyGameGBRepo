@@ -1,8 +1,6 @@
 fileFormatVersion: 2
-guid: b7b13164ee2ed144abec5a716b69f149
+guid: eb5315e2f77c540b6bf545720e84d3a5
+labels:
+- Particles
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
   userData: 
-  assetBundleName: 
-  assetBundleVariant: 
