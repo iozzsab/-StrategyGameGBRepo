@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UniRx;
 
 namespace Abstractions
 {
     public interface IUnitProducer
     {
-        void ProduceUnit();
-        
+        IReadOnlyReactiveCollection<IUnitProductionTask> Queue { get; }
+        public void Cancel(int index);
     }
 }
